@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;700&display=swap');
+
+:root {
+  --text-h: #08060d;
+  --bg: #fff;
+  --sans: 'Kanit', sans-serif;
+  
+  font-family: var(--sans);
+  font-weight: 300; 
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: var(--sans);
+}
+
+#root {
+  width: 100%;
+  max-width: 2500px; /* รองรับจอใหญ่ตามรูป image_ffad04 */
+  margin: 0 auto;
+}
+
+.dept-name-huge {
+  font-size: 6rem; /* ใหญ่กว่าปกติ 6 เท่า */
+  font-weight: 100; /* บางที่สุดเพื่อให้ดูหรูและสะอาดตา */
+  line-height: 1.1;
+  color: #1e3a8a;
+}
+
+/* แก้ไขปัญหา Error glowAnimationCSS */
+.glow-text {
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px rgba(30, 58, 138, 0.2); }
+  50% { text-shadow: 0 0 20px rgba(59, 130, 246, 0.5); color: #3b82f6; }
+  100% { text-shadow: 0 0 5px rgba(30, 58, 138, 0.2); }
+}
